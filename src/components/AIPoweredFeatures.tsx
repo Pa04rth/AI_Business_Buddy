@@ -1,5 +1,4 @@
-
-import { Brain, Target, Code, MessageCircle, Calculator, Megaphone, Portfolio, RotateCcw } from 'lucide-react';
+import { Brain, Target, Code, MessageCircle, Calculator, Megaphone, Briefcase, RotateCcw } from 'lucide-react';
 
 const AIPoweredFeatures = () => {
   const features = [
@@ -46,7 +45,7 @@ const AIPoweredFeatures = () => {
       iconColor: 'text-pink-400'
     },
     {
-      icon: Portfolio,
+      icon: Briefcase,
       title: 'Public Student Portfolios',
       description: 'Showcase student work with AI-generated project summaries and skill highlights',
       color: 'from-indigo-500/20 to-blue-500/20',
