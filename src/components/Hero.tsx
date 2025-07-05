@@ -1,6 +1,5 @@
-
-import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -10,39 +9,54 @@ const Hero = () => {
         <div className="mb-12 animate-fade-in">
           <div className="inline-flex items-center gap-3 bg-white/10 border border-white/20 rounded-full px-6 py-3 backdrop-blur-sm">
             <span className="text-2xl">🚀</span>
-            <span className="text-white font-medium">New: Advanced AI Writing Assistant</span>
+            <span className="text-white font-medium">
+              New: Advanced AI Writing Assistant
+            </span>
             <ArrowRight className="w-4 h-4 text-white" />
           </div>
         </div>
 
         {/* Main Heading */}
-        <div className="mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+        <div
+          className="mb-8 animate-fade-in"
+          style={{ animationDelay: "0.2s" }}
+        >
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight">
-            AI-Powered Content
+            AI-Powered Bridge to
             <br />
-            <span className="gradient-text">Creation at Scale</span>
+            <span className="gradient-text">Student Innovation</span>
           </h1>
         </div>
 
         {/* Subheading */}
-        <div className="mb-12 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+        <div
+          className="mb-12 animate-fade-in"
+          style={{ animationDelay: "0.4s" }}
+        >
           <p className="text-xl md:text-2xl text-writeforge-gray max-w-4xl mx-auto leading-relaxed">
-            Transform your content strategy with our AI writing assistant. Create blog posts,
-            social media content, and marketing copy 10x faster with human-like quality.
+            A win-win platform where businesses get affordable digital
+            solutions, and students turn classroom skills into real-world impact
           </p>
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-          <Button size="lg" className="bg-white text-black hover:bg-writeforge-gray-light hover-glow text-lg px-8 py-4">
-            Start Free Trial
-          </Button>
-          <Button 
-            variant="ghost" 
-            size="lg" 
-            className="text-white hover:text-writeforge-orange border border-white/20 hover:border-writeforge-orange text-lg px-8 py-4"
+        <div
+          className="flex flex-col sm:flex-row items-center justify-center gap-6 animate-fade-in"
+          style={{ animationDelay: "0.6s" }}
+        >
+          <Button
+            size="lg"
+            className="bg-white text-black hover:bg-writeforge-gray-light hover-glow text-lg px-8 py-4"
           >
-            Watch Demo
+            Get Started
+          </Button>
+          <Button
+            variant="ghost"
+            size="lg"
+            className="text-white hover:text-writeforge-orange border border-white/20 hover:border-writeforge-orange text-lg px-8 py-4"
+            onClick={() => (window.location.href = "/about")}
+          >
+            About Us
           </Button>
         </div>
       </div>

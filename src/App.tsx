@@ -8,6 +8,8 @@ import NotFound from "./pages/NotFound";
 import Dashboard from "./pages/dashboard";
 import FAQPage from "./pages/faq";
 import Projects from "./pages/projects";
+import Auth from "./pages/Auth";
+import AboutUs from "./pages/about";
 
 const queryClient = new QueryClient();
 
@@ -21,7 +23,13 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/faq" element={<FAQPage />} />
-          <Route path='/projects' element={<Projects/>}/>
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/auth" element={<Auth />} />
+          <Route path="/about" element={<AboutUs />} />
+
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+
+          {/* Catch-all route for 404 Not Found */}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
