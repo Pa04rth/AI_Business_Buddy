@@ -10,7 +10,7 @@ const Hero = () => {
           <div className="inline-flex items-center gap-3 bg-white/10 border border-white/20 rounded-full px-6 py-3 backdrop-blur-sm">
             <span className="text-2xl">🚀</span>
             <span className="text-white font-medium">
-              New: Advanced AI Writing Assistant
+              Coming Soon: AI-Powered Business Solutions !
             </span>
             <ArrowRight className="w-4 h-4 text-white" />
           </div>

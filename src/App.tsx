@@ -10,6 +10,7 @@ import FAQPage from "./pages/faq";
 import Projects from "./pages/projects";
 import Auth from "./pages/Auth";
 import AboutUs from "./pages/about";
+import Contact from "./pages/contact";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,11 @@ const App = () => (
           <Route path="/projects" element={<Projects />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<Contact />} />
+
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          {/* Example of a custom route */}
+          {/* <Route path="/custom" element={<CustomComponent />} /> */}
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
 
