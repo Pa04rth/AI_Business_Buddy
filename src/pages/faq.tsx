@@ -1,3 +1,4 @@
+
 import {
     Accordion,
     AccordionContent,
@@ -6,6 +7,7 @@ import {
   } from "@/components/ui/accordion";
   import Navigation from '@/components/Navigation';
   import Footer from '@/components/Footer';
+  import { motion } from "framer-motion";
   
   const FAQPage = () => {
     const faqs = [
@@ -60,43 +62,65 @@ import {
     ];
   
     return (
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen bg-background">
         <Navigation />
         
-        <main className="flex-1 py-20 relative">
+        <main className="flex-1 pt-32 pb-20 relative">
+          {/* Background Elements */}
+          <div className="absolute inset-0 -z-10">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-full blur-3xl"></div>
+            <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-2xl"></div>
+            <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-blue-500/10 rounded-full blur-2xl"></div>
+          </div>
+
           <div className="max-w-4xl mx-auto px-6">
             {/* Header */}
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Frequently Asked Questions
+            <motion.div 
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                Frequently Asked <span className="gradient-text">Questions</span>
               </h1>
               <p className="text-xl text-writeforge-gray max-w-2xl mx-auto">
                 Find answers to common questions about our AI content generation platform and how it can help transform your content strategy.
               </p>
-            </div>
+            </motion.div>
   
             {/* FAQ Accordion */}
             <Accordion type="single" collapsible className="space-y-4">
               {faqs.map((faq, index) => (
-                <AccordionItem
+                <motion.div
                   key={index}
-                  value={`item-${index}`}
-                  className="glass-effect rounded-xl border border-writeforge-dark-border px-6 animate-fade-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.6 }}
                 >
-                  <AccordionTrigger className="text-left text-white hover:text-writeforge-orange text-lg font-medium py-6 hover:no-underline">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-writeforge-gray pb-6 text-base leading-relaxed">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
+                  <AccordionItem
+                    value={`item-${index}`}
+                    className="glass-effect rounded-xl border border-writeforge-dark-border px-6 hover:border-blue-500/30 transition-all duration-300"
+                  >
+                    <AccordionTrigger className="text-left text-white hover:text-blue-400 text-lg font-medium py-6 hover:no-underline">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-writeforge-gray pb-6 text-base leading-relaxed">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                </motion.div>
               ))}
             </Accordion>
   
             {/* Contact Support Section */}
-            <div className="mt-20 text-center">
-              <div className="glass-effect rounded-xl border border-writeforge-dark-border p-8">
+            <motion.div 
+              className="mt-20 text-center"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8, duration: 0.6 }}
+            >
+              <div className="glass-effect rounded-xl border border-writeforge-dark-border p-8 hover:border-purple-500/30 transition-all duration-300">
                 <h3 className="text-2xl font-bold text-white mb-4">
                   Still have questions?
                 </h3>
@@ -104,15 +128,15 @@ import {
                   Can't find the answer you're looking for? Our support team is here to help you succeed.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-writeforge-orange hover:bg-writeforge-orange/90 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                  <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover-glow">
                     Contact Support
                   </button>
-                  <button className="border border-writeforge-dark-border hover:border-writeforge-orange text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                  <button className="border border-writeforge-dark-border hover:border-blue-500 text-white px-6 py-3 rounded-lg font-medium transition-colors">
                     Live Chat
                   </button>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </main>
   

@@ -72,8 +72,8 @@ export default function AboutUs() {
 
         {/* Background Elements */}
         <div className="absolute inset-0 -z-10">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-writeforge-orange/20 to-writeforge-orange-light/20 rounded-full blur-3xl"></div>
-          <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-writeforge-orange/10 rounded-full blur-2xl"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-2xl"></div>
         </div>
       </section>
 
@@ -90,7 +90,7 @@ export default function AboutUs() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
               >
-                <div className="text-4xl md:text-5xl font-bold gradient-text mb-2">
+                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">
                   {stat.number}
                 </div>
                 <div className="text-writeforge-gray text-lg">
@@ -118,14 +118,14 @@ export default function AboutUs() {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                className="group glass-effect rounded-2xl p-8 hover:border-writeforge-orange/30 transition-all duration-300 hover-glow animate-fade-in"
+                className="group glass-effect rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300 hover-glow animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-writeforge-orange/20 to-writeforge-orange-light/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="w-8 h-8 text-writeforge-orange" />
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="w-8 h-8 text-blue-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">
                   {feature.title}
@@ -137,12 +137,16 @@ export default function AboutUs() {
             ))}
           </div>
         </div>
+
+        {/* Additional Background Elements */}
+        <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-blue-500/10 rounded-full blur-2xl"></div>
+        <div className="absolute top-1/2 right-1/4 w-72 h-72 bg-purple-500/10 rounded-full blur-2xl"></div>
       </section>
 
       {/* Mission Section */}
       <section className="py-20 relative">
         <div className="max-w-5xl mx-auto px-6">
-          <div className="glass-effect rounded-3xl p-12 text-center">
+          <div className="glass-effect rounded-3xl p-12 text-center border border-blue-500/20 hover:border-purple-500/30 transition-all duration-300">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -159,12 +163,12 @@ export default function AboutUs() {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                 <div className="text-center">
-                  <div className="text-2xl font-bold gradient-text">For Businesses</div>
+                  <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">For Businesses</div>
                   <div className="text-writeforge-gray">Affordable digital solutions</div>
                 </div>
-                <div className="hidden sm:block w-px h-12 bg-writeforge-dark-border"></div>
+                <div className="hidden sm:block w-px h-12 bg-gradient-to-b from-blue-500/50 to-purple-500/50"></div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold gradient-text">For Students</div>
+                  <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">For Students</div>
                   <div className="text-writeforge-gray">Real-world experience</div>
                 </div>
               </div>
@@ -182,7 +186,7 @@ export default function AboutUs() {
             transition={{ delay: 0.4, duration: 0.8 }}
           >
             <p className="text-writeforge-gray text-lg mb-4">Built with ❤️ by</p>
-            <p className="text-2xl font-bold gradient-text">Parth</p>
+            <p className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Parth</p>
           </motion.div>
         </div>
       </section>
