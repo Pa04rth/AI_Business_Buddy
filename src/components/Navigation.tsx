@@ -80,7 +80,40 @@ const Navigation = () => {
               </div>
 
               <div className="flex items-center space-x-3">
-                {/* Navigation Links - Visible when scrolled */}
+                {/* Navigation Links - Always show when not scrolled, or when scrolled */}
+                {!scrolled && (
+                  <div className="hidden md:flex items-center space-x-8 text-base text-white/80">
+                    <a href="/" className="hover:text-white transition-colors">
+                      Home
+                    </a>
+                    <a
+                      href="/dashboard"
+                      className="hover:text-white transition-colors"
+                    >
+                      Dashboard
+                    </a>
+                    <a
+                      href="/projects"
+                      className="hover:text-white transition-colors"
+                    >
+                      Projects
+                    </a>
+                    <a
+                      href="/faq"
+                      className="hover:text-white transition-colors"
+                    >
+                      FAQ
+                    </a>
+                    <a
+                      href="/contact"
+                      className="hover:text-white transition-colors"
+                    >
+                      Contact
+                    </a>
+                  </div>
+                )}
+
+                {/* Navigation Links when scrolled */}
                 {scrolled && (
                   <div className="hidden md:flex items-center space-x-8 text-sm text-white/80">
                     <a href="/" className="hover:text-white transition-colors">
@@ -115,52 +148,15 @@ const Navigation = () => {
 
                 {/* Auth Buttons */}
                 {user ? (
-                  // Buttons when user is logged in
-                  <>
-                    <Button
-                      variant="ghost"
-                      className="text-writeforge-gray hover:text-white hover:bg-white/10"
-                      onClick={() => navigate("/")}
-                    >
-                      Home
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      className="text-writeforge-gray hover:text-white hover:bg-white/10"
-                      onClick={() => navigate("/dashboard")}
-                    >
-                      Dashboard
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      className="text-writeforge-gray hover:text-white hover:bg-white/10"
-                      onClick={() => navigate("/projects")}
-                    >
-                      Projects
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      className="text-writeforge-gray hover:text-white hover:bg-white/10"
-                      onClick={() => navigate("/faq")}
-                    >
-                      FAQ
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      className="text-writeforge-gray hover:text-white hover:bg-white/10"
-                      onClick={() => navigate("/contact")}
-                    >
-                      Contact
-                    </Button>
-                    <Button
-                      className="bg-white text-black hover:bg-writeforge-gray-light hover-glow"
-                      onClick={handleSignOut}
-                    >
-                      Sign Out
-                    </Button>
-                  </>
+                  // Only Sign Out button when user is logged in
+                  <Button
+                    className="bg-white text-black hover:bg-writeforge-gray-light hover-glow"
+                    onClick={handleSignOut}
+                  >
+                    Sign Out
+                  </Button>
                 ) : scrolled ? (
-                  // Buttons when scrolled and not logged in
+                  // Get Started button when scrolled and not logged in
                   <div className="flex items-center space-x-2">
                     <Button
                       className="bg-white text-black hover:bg-writeforge-gray-light hover-glow px-4 py-1.5 text-sm rounded-full"
@@ -171,55 +167,20 @@ const Navigation = () => {
                   </div>
                 ) : (
                   // Login/Sign Up buttons when not logged in and not scrolled
-                  <div className="flex items-center space-x-8">
-                    <div className="hidden md:flex items-center space-x-8 text-base">
-                      <a
-                        href="/"
-                        className="hover:text-white transition-colors"
-                      >
-                        Home
-                      </a>
-                      <a
-                        href="/dashboard"
-                        className="text-writeforge-gray hover:text-white transition-colors"
-                      >
-                        Dashboard
-                      </a>
-                      <a
-                        href="/projects"
-                        className="text-writeforge-gray hover:text-white transition-colors"
-                      >
-                        Projects
-                      </a>
-                      <a
-                        href="/faq"
-                        className="text-writeforge-gray hover:text-white transition-colors"
-                      >
-                        FAQ
-                      </a>
-                      <a
-                        href="/contact"
-                        className="text-writeforge-gray hover:text-white transition-colors"
-                      >
-                        Contact
-                      </a>
-                    </div>
-
-                    <div className="flex items-center space-x-3">
-                      <Button
-                        variant="ghost"
-                        className="text-writeforge-gray hover:text-white hover:bg-white/10"
-                        onClick={handleAuthClick}
-                      >
-                        Login
-                      </Button>
-                      <Button
-                        className="bg-white text-black hover:bg-writeforge-gray-light hover-glow"
-                        onClick={handleAuthClick}
-                      >
-                        Sign Up
-                      </Button>
-                    </div>
+                  <div className="flex items-center space-x-3">
+                    <Button
+                      variant="ghost"
+                      className="text-writeforge-gray hover:text-white hover:bg-white/10"
+                      onClick={handleAuthClick}
+                    >
+                      Login
+                    </Button>
+                    <Button
+                      className="bg-white text-black hover:bg-writeforge-gray-light hover-glow"
+                      onClick={handleAuthClick}
+                    >
+                      Sign Up
+                    </Button>
                   </div>
                 )}
               </div>
