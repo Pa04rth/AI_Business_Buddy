@@ -83,10 +83,7 @@ const Navigation = () => {
                 {/* Navigation Links - Visible when scrolled */}
                 {scrolled && (
                   <div className="hidden md:flex items-center space-x-8 text-sm text-white/80">
-                    <a
-                      href="/home"
-                      className="hover:text-white transition-colors"
-                    >
+                    <a href="/" className="hover:text-white transition-colors">
                       Home
                     </a>
                     <a
@@ -177,7 +174,7 @@ const Navigation = () => {
                   <div className="flex items-center space-x-8">
                     <div className="hidden md:flex items-center space-x-8 text-base">
                       <a
-                        href="/home"
+                        href="/"
                         className="hover:text-white transition-colors"
                       >
                         Home

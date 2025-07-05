@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
@@ -9,46 +8,52 @@ export default function AboutUs() {
     {
       icon: Lightbulb,
       title: "AI Auto-Scoping Assistant",
-      description: "Convert vague ideas into structured, scoping-ready project outlines with timelines and estimates."
+      description:
+        "Convert vague ideas into structured, scoping-ready project outlines with timelines and estimates.",
     },
     {
       icon: Users,
-      title: "Skill-to-Project Recommender", 
-      description: "Let AI recommend projects to students based on their skills, GitHub activity, and learning goals."
+      title: "Skill-to-Project Recommender",
+      description:
+        "Let AI recommend projects to students based on their skills, GitHub activity, and learning goals.",
     },
     {
       icon: Target,
       title: "AI Progress Evaluator",
-      description: "Students receive intelligent feedback on their submissions and code from our Gemini-based evaluator."
+      description:
+        "Students receive intelligent feedback on their submissions and code from our Gemini-based evaluator.",
     },
     {
       icon: Rocket,
       title: "24x7 AI Support Assistant",
-      description: "Businesses can chat with our AI to get ideas, support, and suggestions even while students work."
+      description:
+        "Businesses can chat with our AI to get ideas, support, and suggestions even while students work.",
     },
     {
       icon: Globe,
       title: "Smart Budgeting & Quotes",
-      description: "Auto-generate accurate quotes and monitor project budgets using intelligent price prediction."
+      description:
+        "Auto-generate accurate quotes and monitor project budgets using intelligent price prediction.",
     },
     {
       icon: Shield,
       title: "Student Portfolios & Leaderboards",
-      description: "Students build public portfolios with badges, project scores, and real-world accomplishments."
-    }
+      description:
+        "Students build public portfolios with badges, project scores, and real-world accomplishments.",
+    },
   ];
 
   const stats = [
     { number: "500+", label: "Projects Completed" },
     { number: "200+", label: "Student Developers" },
     { number: "150+", label: "Businesses Served" },
-    { number: "95%", label: "Success Rate" }
+    { number: "95%", label: "Success Rate" },
   ];
 
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-32 pb-20 relative">
         <div className="max-w-7xl mx-auto px-6 text-center">
@@ -59,13 +64,14 @@ export default function AboutUs() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
-              About <span className="gradient-text">WriteForge</span>
+              About <span className="gradient-text">AI_Business_Buddy</span>
             </h1>
             <p className="text-xl md:text-2xl text-writeforge-gray max-w-4xl mx-auto leading-relaxed">
-              We are building an AI-powered bridge that connects local entrepreneurs 
-              and visionaries with talented student developers. Our mission is to help 
-              businesses go digital affordably, while enabling students to work on 
-              real-world projects and build their portfolios.
+              We are building an AI-powered bridge that connects local
+              entrepreneurs and visionaries with talented student developers.
+              Our mission is to help businesses go digital affordably, while
+              enabling students to work on real-world projects and build their
+              portfolios.
             </p>
           </motion.div>
         </div>
@@ -93,9 +99,7 @@ export default function AboutUs() {
                 <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">
                   {stat.number}
                 </div>
-                <div className="text-writeforge-gray text-lg">
-                  {stat.label}
-                </div>
+                <div className="text-writeforge-gray text-lg">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -110,7 +114,8 @@ export default function AboutUs() {
               Powerful AI Features
             </h2>
             <p className="text-xl text-writeforge-gray max-w-3xl mx-auto">
-              Everything you need to bridge the gap between businesses and student talent
+              Everything you need to bridge the gap between businesses and
+              student talent
             </p>
           </div>
 
@@ -156,20 +161,29 @@ export default function AboutUs() {
                 Our Mission
               </h2>
               <p className="text-lg text-writeforge-gray leading-relaxed mb-8">
-                We believe in creating win-win opportunities where businesses get affordable, 
-                high-quality digital solutions while students gain real-world experience and 
-                build impressive portfolios. Through AI-powered matching and project management, 
-                we're making digital transformation accessible to everyone.
+                We believe in creating win-win opportunities where businesses
+                get affordable, high-quality digital solutions while students
+                gain real-world experience and build impressive portfolios.
+                Through AI-powered matching and project management, we're making
+                digital transformation accessible to everyone.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                 <div className="text-center">
-                  <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">For Businesses</div>
-                  <div className="text-writeforge-gray">Affordable digital solutions</div>
+                  <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                    For Businesses
+                  </div>
+                  <div className="text-writeforge-gray">
+                    Affordable digital solutions
+                  </div>
                 </div>
                 <div className="hidden sm:block w-px h-12 bg-gradient-to-b from-blue-500/50 to-purple-500/50"></div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">For Students</div>
-                  <div className="text-writeforge-gray">Real-world experience</div>
+                  <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                    For Students
+                  </div>
+                  <div className="text-writeforge-gray">
+                    Real-world experience
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -185,8 +199,12 @@ export default function AboutUs() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            <p className="text-writeforge-gray text-lg mb-4">Built with ❤️ by</p>
-            <p className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Parth</p>
+            <p className="text-writeforge-gray text-lg mb-4">
+              Built with ❤️ by
+            </p>
+            <p className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Parth
+            </p>
           </motion.div>
         </div>
       </section>
