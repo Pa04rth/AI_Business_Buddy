@@ -169,17 +169,10 @@ const Navigation = () => {
                   // Login/Sign Up buttons when not logged in and not scrolled
                   <div className="flex items-center space-x-3">
                     <Button
-                      variant="ghost"
-                      className="text-writeforge-gray hover:text-white hover:bg-white/10"
+                      className="bg-white text-black hover:bg-writeforge-gray-light hover-glow px-4 py-1.5 text-sm rounded-full"
                       onClick={handleAuthClick}
                     >
-                      Login
-                    </Button>
-                    <Button
-                      className="bg-white text-black hover:bg-writeforge-gray-light hover-glow"
-                      onClick={handleAuthClick}
-                    >
-                      Sign Up
+                      Get Started
                     </Button>
                   </div>
                 )}

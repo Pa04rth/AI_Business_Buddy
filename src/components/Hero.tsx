@@ -47,6 +47,7 @@ const Hero = () => {
           <Button
             size="lg"
             className="bg-white text-black hover:bg-writeforge-gray-light hover-glow text-lg px-8 py-4"
+            onClick={() => (window.location.href = "/auth")}
           >
             Get Started
           </Button>
