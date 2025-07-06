@@ -6,7 +6,7 @@ import AIPoweredFeatures from "@/components/AIPoweredFeatures";
 import Features from "@/components/Features";
 import SuccessStories from "@/components/SuccessStories";
 import AboutUs from "@/components/AboutUs";
-import Pricing from "@/components/Pricing";
+
 import FAQ from "@/components/FAQ";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
@@ -22,7 +22,6 @@ const Index = () => {
       <Features />
       <SuccessStories />
       <AboutUs />
-      <Pricing />
       <FAQ />
       <CallToAction />
       <Footer />

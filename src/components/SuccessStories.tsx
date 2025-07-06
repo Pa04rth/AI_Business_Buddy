@@ -3,24 +3,24 @@ import { Star } from "lucide-react";
 const SuccessStories = () => {
   const businessTestimonials = [
     {
-      name: "Sachet Gupta",
-      role: "Founder, Gupta Refractories",
-      avatar: "SG",
+      name: "Sarah Chen",
+      role: "Founder, TechStart",
+      avatar: "SC",
       quote:
         "The AI matched us with the perfect student developer. Our MVP was delivered on time and under budget!",
-      rating: 4.5,
+      rating: 5,
     },
     {
-      name: "Jahanvi Sohaney",
-      role: "CEO, HealthTech Innovations ",
-      avatar: "JS",
+      name: "Marcus Rodriguez",
+      role: "CEO, LocalBiz",
+      avatar: "MR",
       quote:
         "Incredible talent pool. The student we worked with is now our part-time developer. Best investment ever.",
-      rating: 4,
+      rating: 5,
     },
     {
-      name: "Ekta Sohaney",
-      role: "CMO, Food Delivery Co.",
+      name: "Emily Watson",
+      role: "CMO, GrowthCorp",
       avatar: "EW",
       quote:
         "The AI chatbot they built transformed our customer service. Professional quality at student prices.",
@@ -30,23 +30,23 @@ const SuccessStories = () => {
 
   const studentTestimonials = [
     {
-      name: "Harsh Kumar",
+      name: "Alex Kumar",
       role: "Computer Science Student",
-      avatar: "HK",
+      avatar: "AK",
       quote:
         "Built 5 real projects and landed my dream internship. The platform changed my career trajectory!",
       rating: 5,
     },
     {
-      name: "Nitin Kumar",
+      name: "Jessica Park",
       role: "Web Development Bootcamp",
-      avatar: "NK",
+      avatar: "JP",
       quote:
         "From zero experience to building production apps for real businesses. My portfolio is now amazing!",
       rating: 5,
     },
     {
-      name: "Diksha Tiwari",
+      name: "David Thompson",
       role: "Engineering Student",
       avatar: "DT",
       quote:

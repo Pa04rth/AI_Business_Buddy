@@ -28,14 +28,8 @@ const App = () => (
           <Route path="/auth" element={<Auth />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
-
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          {/* Example of a custom route */}
-          {/* <Route path="/custom" element={<CustomComponent />} /> */}
-
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-
           {/* Catch-all route for 404 Not Found */}
+          <Route path="/*" element={<NotFound />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

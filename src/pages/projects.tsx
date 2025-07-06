@@ -89,7 +89,7 @@ const Projects = () => {
         budget: formData.budget ? parseFloat(formData.budget) : null,
       };
 
-      await addDoc(collection(db, "projects"), projectData);
+      await addDoc(collection(db, "Projects"), projectData);
       setShowNewProjectForm(false);
       setFormData({
         title: "",
