@@ -186,7 +186,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-900  to-gray-900">
       <Navigation />
 
       <main className="flex-1 py-20 px-6">
